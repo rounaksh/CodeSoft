@@ -11,6 +11,28 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Custom Scrollbar CSS */
+/* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: #00acf0 #081b29;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #081b29;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #00acf0;
+    border-radius: 15px;
+    border: 0px none #ffffff;
+}
+
 :root {
     --bg-color: #081b29;
     --second-bg-color: #112e42;
