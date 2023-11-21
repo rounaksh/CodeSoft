@@ -2,28 +2,179 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Responsive Ecommerce Landing Page</title>
 </head>
 
 <body>
-    <!-- Header Section -->
-    <!-- Hero Banner Section -->
-    <!-- Banner Navigation -->
-    <!-- Banner Carousel -->
-    <!-- Main Section Start -->
-    <!-- First Menu Section -->
-    <!-- Second Menu Section -->
-    <!-- Third Menu Section -->
-    <!-- Coupon Section -->
-    <!-- Main Section End -->
-    <!-- Footer Section -->
+    <div class="container page">
+        <!-- Header Section -->
+        <header id="header">
+            <a href="/" class="logo">Restraunt</a>
+            <a href="#" class="cart d-flex justify-content-center align-items-center"><i class="bi bi-cart3"></i><span
+                    class="number d-flex justify-content-center align-items-center">3</span></a>
+        </header>
+
+        <!-- Hero Banner Section -->
+        <div class="banner container d-flex align-items-center">
+            <!-- Banner Navigation -->
+            <ul class="nav d-inline-flex justify-content-start">
+                <li>
+                    <a data-bs-target="#carouselIndicators" data-bs-slide-to="0" title="Breakfast" href="#"
+                        class="nav-btn"><i class="bi bi-sunrise"></i></a>
+                </li>
+                <li>
+                    <a data-bs-target="#carouselIndicators" data-bs-slide-to="1" title="Lunch" href="#"
+                        class="nav-btn"><i class="bi bi-sun"></i></a>
+                </li>
+                <li>
+                    <a data-bs-target="#carouselIndicators" data-bs-slide-to="2" title="Evening Snack" href="#"
+                        class="nav-btn"><i class="bi bi-sunset"></i></a>
+                </li>
+                <li>
+                    <a data-bs-target="#carouselIndicators" data-bs-slide-to="3" title="Dinner" href="#"
+                        class="nav-btn"><i class="bi bi-moon-stars"></i></a>
+                </li>
+            </ul>
+            <!-- Banner Carousel -->
+            <div id="carouselIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                    <!-- 0 -->
+                    <div class="carousel-item active">
+                        <div
+                            class="row d-flex flex-xl-row flex-md-column-reverse align-items-center justify-content-between">
+                            <!-- One row contains 12 column so 5 + 7 = 12 -->
+                            <div class="content col-xl-5 col-md-12">
+                                <h1>Your Breakfast</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Labore, deserunt velit. Quidem, sequi libero est accusamus
+                                    fuga accusantium quod, error quam itaque labore eius
+                                    deserunt delectus tempora fugit vel? Unde fugit, ipsam
+                                    possimus, officiis dolorum temporibus et ullam molestiae
+                                    expedita eligendi harum illum deserunt nulla porro dolores.
+                                    Odit, ea neque!
+                                </p>
+
+                                <a href="#" class="page-btn">
+                                    Check Menu
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="food-image col-xl-7 col-md-12">
+                                <img src="./images/food-1.png" alt="Food 1" class="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1 -->
+                    <div class="carousel-item">
+                        <div
+                            class="row d-flex flex-xl-row flex-md-column-reverse align-items-center justify-content-between">
+                            <!-- One row contains 12 column so 5 + 7 = 12 -->
+                            <div class="content col-xl-5 col-md-12">
+                                <h1>Your Lunch</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Labore, deserunt velit. Quidem, sequi libero est accusamus
+                                    fuga accusantium quod, error quam itaque labore eius
+                                    deserunt delectus tempora fugit vel? Unde fugit, ipsam
+                                    possimus, officiis dolorum temporibus et ullam molestiae
+                                    expedita eligendi harum illum deserunt nulla porro dolores.
+                                    Odit, ea neque!
+                                </p>
+
+                                <a href="#" class="page-btn">
+                                    Check Menu
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="food-image col-xl-7 col-md-12">
+                                <img src="./images/food-11.png" alt="Food 1" class="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="carousel-item">
+                        <div
+                            class="row d-flex flex-xl-row flex-md-column-reverse align-items-center justify-content-between">
+                            <!-- One row contains 12 column so 5 + 7 = 12 -->
+                            <div class="content col-xl-5 col-md-12">
+                                <h1>Your Dinner</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Labore, deserunt velit. Quidem, sequi libero est accusamus
+                                    fuga accusantium quod, error quam itaque labore eius
+                                    deserunt delectus tempora fugit vel? Unde fugit, ipsam
+                                    possimus, officiis dolorum temporibus et ullam molestiae
+                                    expedita eligendi harum illum deserunt nulla porro dolores.
+                                    Odit, ea neque!
+                                </p>
+
+                                <a href="#" class="page-btn">
+                                    Check Menu
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="food-image col-xl-7 col-md-12">
+                                <img src="./images/food-12.png" alt="Food 1" class="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="carousel-item">
+                        <div
+                            class="row d-flex flex-xl-row flex-md-column-reverse align-items-center justify-content-between">
+                            <!-- One row contains 12 column so 5 + 7 = 12 -->
+                            <div class="content col-xl-5 col-md-12">
+                                <h1>Healthy Food</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Labore, deserunt velit. Quidem, sequi libero est accusamus
+                                    fuga accusantium quod, error quam itaque labore eius
+                                    deserunt delectus tempora fugit vel? Unde fugit, ipsam
+                                    possimus, officiis dolorum temporibus et ullam molestiae
+                                    expedita eligendi harum illum deserunt nulla porro dolores.
+                                    Odit, ea neque!
+                                </p>
+
+                                <a href="#" class="page-btn">
+                                    Check Menu
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="food-image col-xl-7 col-md-12">
+                                <img src="./images/food-13.png" alt="Food 1" class="img-fluid" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner Navigation -->
+
+        <!-- Banner Carousel -->
+
+        <!-- Main Section Start -->
+
+        <!-- First Menu Section -->
+
+        <!-- Second Menu Section -->
+
+        <!-- Third Menu Section -->
+
+        <!-- Coupon Section -->
+
+        <!-- Main Section End -->
+
+        <!-- Footer Section -->
+    </div>
     <!-- Back to Top Button -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

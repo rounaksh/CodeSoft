@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #007d68;
+    --second: #3a3a3a;
+    --third: #f2f2f2;
+}
+
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background: url('../images/forest-2.jpeg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Containe Page CSS */
+
+.page {
+    position: relative;
+    background: rgba(255, 255, 255, .5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 100px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+/* Header Section  CSS*/
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    background: transparent;
+    transition: .5s;
+    z-index: 1100;
+}
+
+.logo {
+    position: relative;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.cart {
+    position: relative;
+    text-decoration: none;
+    background: #000;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .2);
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transition: .3s !important;
+}
+
+.cart:hover {
+    border-radius: 50%;
+}
+
+.cart i {
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.cart .number {
+    position: absolute;
+    right: -2px;
+    bottom: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.7em;
+    font-weight: 500;
+}
+
+/* Hero Banner Section CSS */
+
+.banner {
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    padding: 100px 0 20px;
+    overflow: hidden;
+}
+
+/* Banner Navigation CSS */
+
+.nav {
+    position: absolute;
+    top: 42%;
+    margin: 40px 0;
+    z-index: 1100;
+}
+
+.nav li {
+    list-style: none;
+    margin: 0 20px 0 0;
+}
+
+.nav li .nav-btn {
+    position: relative;
+    text-decoration: none;
+    background: #000;
+    border: none;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 0 20 0 rgba(0, 0, 0, .2);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nav li .nav-btn:hover {
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.nav li .nav-btn i {
+    font-size: 1.4em;
+    color: #fff;
+}
+
+/* Banner Carousel */
+
+.banner .food-image img {
+    width: 100%;
+}
+
+.banner .content h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #000;
+    font-size: 4.5em;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.banner .content p {
+    margin-top: 100px;
+}
+
+.page-btn {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    background: #000;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+    padding: 10px 20px;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: .5s;
+    display: inline-flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.page-btn:hover {
+    border: none;
+    border-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
