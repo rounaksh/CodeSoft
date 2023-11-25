@@ -205,6 +205,19 @@ main {
     padding: 150px 0 20px;
 }
 
+.menu-primary::before {
+    content: '';
+    position: absolute;
+    background: url(../images/food-13.png) no-repeat center;
+    background-size: cover;
+    width: 222px;
+    height: 400px;
+    left: -150px;
+    top: -230px;
+    z-index: -1;
+    transform: rotateZ(45deg);
+}
+
 /* Item Card */
 .card {
     position: relative;
@@ -321,4 +334,343 @@ main {
     font-weight: 300;
     letter-spacing: 1px;
     text-align: end;
+}
+
+/* Second Menu Section CSS */
+.menu-second {
+    position: relative;
+    padding: 100px 0 20px;
+}
+
+.menu-second img {
+    width: 100%;
+}
+
+.menu-second .item-btn {
+    right: 0;
+    bottom: 80%;
+}
+
+/* Third Menu Section CSS */
+.menu-third {
+    position: relative;
+    padding: 100px 0 20px;
+}
+
+.menu-third::before {
+    position: absolute;
+    content: '';
+    background: url('../images/food-7.png') no-repeat center;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    left: -10%;
+    top: -5%;
+    z-index: -1;
+}
+
+/* Booking */
+.booking {
+    padding: 20px;
+}
+
+.booking h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+}
+
+/* Reservation Form CSS */
+.booking form input,
+.booking form textarea {
+    background: transparent;
+    outline: none;
+    border: .5px solid rgba(0, 0, 0, .5);
+    border-radius: 20px;
+    transition: .1s;
+}
+
+.booking form input:focus,
+.booking form textarea:focus {
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.booking form label {
+    padding-bottom: 5px;
+}
+
+.booking form .form-group {
+    margin-bottom: 10px;
+}
+
+.booking form button[type='submit'] {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    background: #000;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .2);
+    padding: 10px 20px;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: .3s;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.booking form button[type='submit']:hover {
+    border-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+/* Second Item Card */
+.card-second {
+    position: relative;
+    background: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 40px;
+    border: none;
+    padding: 20px;
+}
+
+.card-second .item-img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 130%;
+}
+
+.card-second .login,
+.card-second .menu {
+    position: absolute;
+    top: 15px;
+}
+
+.card-second .login {
+    left: 20px;
+}
+
+.card-second .menu {
+    right: 20px;
+}
+
+.card-second .login i,
+.card-second .menu i {
+    color: #000;
+    font-size: 1.3em;
+}
+
+.card-second .item-content h4 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.card-second .item-content p {
+    font-size: .8em;
+    font-weight: 300;
+}
+
+.card-second .like {
+    position: absolute;
+    top: 60%;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card-second .like i {
+    color: #fff;
+    font-size: 1em;
+}
+
+.card-second .price {
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Download App Section */
+.app-download {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.app-download h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.app-download h4 {
+    font-size: 1.2em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.app-download p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.download img {
+    width: 100%;
+}
+
+/* Coupon Section CSS */
+.coupon {
+    position: relative;
+    padding: 100px 0 20px;
+    border-bottom: 1px solid #000;
+}
+
+.coupon h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+}
+
+.coupon-content p {
+    margin-top: 10px;
+    font-size: .8em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Footer Section CSS */
+#footer .footer-top {
+    padding: 60px 0 30px 0;
+    background: transparent;
+}
+
+#footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    margin: 0 0 10px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 600;
+}
+
+#footer .footer-top .footer-contact p {
+    font-size: .8em;
+    line-height: 25px;
+    margin-bottom: 0;
+    color: var(--second);
+}
+
+#footer .footer-top h4 {
+    font-size: 1em;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#footer .footer-top .footer-links {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+    padding-right: 5px;
+    color: var(--second);
+    font-size: .9em;
+    line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+    padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+    text-decoration: none;
+    color: var(--second);
+    transition: .3s;
+    display: inline-block;
+    line-height: 1;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+    color: var(--primary);
+}
+
+#footer .footer-top .footer-links p {
+    color: var(--second);
+}
+
+#footer .footer-top .social-links a {
+    font-size: 1em;
+    display: inline-block;
+    background: #000;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+    color: #fff;
+    line-height: 1;
+    padding: 8px;
+    margin-right: 4px;
+    text-decoration: none;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: .3s;
+}
+
+#footer .footer-top .social-links a:hover {
+    color: #fff;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+#footer .footer-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #000;
+}
+
+#footer .copyright {
+    float: left;
+}
+
+.copyright span {
+    color: var(--primary);
+}
+
+#footer .credits {
+    float: right;
+    font-size: .8em;
+}
+
+#footer .credits a {
+    text-decoration: none;
+    transition: .3s;
+    color: #000;
+    font-weight: 600;
 }
