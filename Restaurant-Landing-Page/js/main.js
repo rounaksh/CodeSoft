@@ -27,3 +27,29 @@ window.onload = function () {
         };
     }
 };
+
+// Back To Top
+const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
+
+// Show Back to Top button on page scroll
+const selectHeader = document.querySelector('#header')
+const backToTop = document.querySelector('.back-to-top')
+if (selectHeader) {
+    const headerScrolled = () => {
+        window.scrollY > 100 ? backToTop.classList.add('active') : backToTop.classList.remove('active')
+    }
+    window.addEventListener('load', headerScrolled)
+    document.addEventListener('scroll', headerScrolled)
+}
+
+// Animation on scroll - Initialization
+window.addEventListener('load', () => {
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    })
+})

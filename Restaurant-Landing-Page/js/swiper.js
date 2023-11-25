@@ -1,7 +1,7 @@
 //  Initialize Swiper
 var swiper = new Swiper('.cardSwiper', {
     speed: 400,
-    slidesPerView: 2,
+    slidesPerView: 'auto',
     spaceBetween: 30,
     autoplay: false,
     loop: true,

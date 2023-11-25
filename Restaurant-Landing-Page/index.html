@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
         integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
     <title>Responsive Ecommerce Landing Page</title>
 </head>
@@ -18,7 +19,8 @@
         <!-- Header Section -->
         <header id="header">
             <a href="/" class="logo">Restaurant</a>
-            <a href="#" class="cart d-flex justify-content-center align-items-center"><i class="bi bi-cart3"></i><span
+            <a href="#" data-aos="fade-down-left" data-aos-delay="100"
+                class="cart d-flex justify-content-center align-items-center"><i class="bi bi-cart3"></i><span
                     class="number d-flex justify-content-center align-items-center">3</span></a>
         </header>
 
@@ -26,19 +28,19 @@
         <div class="banner container d-flex align-items-center">
             <!-- Banner Navigation -->
             <ul class="nav d-inline-flex justify-content-start">
-                <li>
+                <li data-aos="fade-up">
                     <a data-bs-target="#carouselIndicators" data-bs-slide-to="0" title="Breakfast" href="#"
                         class="nav-btn active"><i class="bi bi-sunrise"></i></a>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-delay="50">
                     <a data-bs-target="#carouselIndicators" data-bs-slide-to="1" title="Lunch" href="#"
                         class="nav-btn"><i class="bi bi-sun"></i></a>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-delay="100">
                     <a data-bs-target="#carouselIndicators" data-bs-slide-to="2" title="Dinner" href="#"
                         class="nav-btn"><i class="bi bi-sunset"></i></a>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-delay="200">
                     <a data-bs-target="#carouselIndicators" data-bs-slide-to="3" title="Healthy Food" href="#"
                         class="nav-btn"><i class="bi bi-moon-stars"></i></a>
                 </li>
@@ -52,8 +54,8 @@
                             class="row d-flex flex-xl-row flex-md-column-reverse align-items-center justify-content-between">
                             <!-- One row contains 12 column so 5 + 7 = 12 -->
                             <div class="content col-xl-5 col-md-12">
-                                <h1>Your Breakfast</h1>
-                                <p>
+                                <h1 data-aos="fade-down">Your Breakfast</h1>
+                                <p data-aos="fade-right" data-aos-delay="200">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     Labore, deserunt velit. Quidem, sequi libero est accusamus
                                     fuga accusantium quod, error quam itaque labore eius
@@ -63,12 +65,12 @@
                                     Odit, ea neque!
                                 </p>
 
-                                <a href="#" class="page-btn">
+                                <a data-aos="fade-right" data-aos-delay="200" href="#" class="page-btn">
                                     Check Menu
                                     <i class="bi bi-arrow-right"></i>
                                 </a>
                             </div>
-                            <div class="food-image col-xl-7 col-md-12">
+                            <div data-aos="zoom-in" data-aos-delay="200" class="food-image col-xl-7 col-md-12">
                                 <img src="./images/food-1.png" alt="Food 1" class="img-fluid" />
                             </div>
                         </div>
@@ -150,7 +152,7 @@
                                 </a>
                             </div>
                             <div class="food-image col-xl-7 col-md-12">
-                                <img src="./images/food-13.png" alt="Food 1" class="img-fluid" />
+                                <img src="./images/food-5.png" alt="Food 1" class="img-fluid" />
                             </div>
                         </div>
                     </div>
@@ -165,7 +167,7 @@
                 <!-- Card Slider using SwiperJS -->
 
                 <!-- Slider main container -->
-                <div class="swiper cardSwiper col-xl-6 col-md-12">
+                <div class="swiper cardSwiper col-xl-6 col-md-12" data-aos="zoom-in">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
@@ -248,7 +250,8 @@
                     </div>
                 </div>
 
-                <div class="description col-xl-6 col-md-12 d-flex flex-column justify-content-center align-items-end">
+                <div data-aos="fade-down" data-aos-delay="100"
+                    class="description col-xl-6 col-md-12 d-flex flex-column justify-content-center align-items-end">
                     <h2>Lorem ipsum dolor sit</h2>
                     <h4>Lorem ipsum dolor, sit amet consectetur adipisicing.</h4>
                     <p>
@@ -260,7 +263,7 @@
 
             <!-- Second Menu Section -->
             <div class="row menu-second">
-                <div class="description col-xl-7 col-md-12">
+                <div class="description col-xl-7 col-md-12" data-aos="fade-down">
                     <h2 class="text-start">Lorem ipsum dolor sit amet</h2>
                     <h4 class="text-start">Lorem ipsum dolor sit, adipisicing elit</h4>
                     <p class="text-start">
@@ -272,7 +275,7 @@
                         quam pariatur itaque officia nam laudantium illum provident.
                     </p>
                 </div>
-                <div class="menu-image col-xl-5 col-md-12">
+                <div data-aos="fade-up" data-aos-delay="100" class="menu-image col-xl-5 col-md-12">
                     <img src="./images/food-4.png" alt="Food" class="img-fluid">
                     <a title="AddToCart" href="#" class="item-btn d-flex justify-content-center align-items-center">
                         <i class="bi bi-cart-plus"></i>
@@ -282,7 +285,7 @@
 
             <!-- Third Menu Section -->
             <div class="row menu-third">
-                <div class="col-xl-6 col-md-12">
+                <div class="col-xl-6 col-md-12" data-aos="fade-right" data-aos-delay="100">
                     <div class="booking">
                         <h2>Reservation</h2>
                         <form action="#">
@@ -311,7 +314,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6">
+                <div class="col-xl-3 col-md-6" data-aos="fade-left" data-aos-delay="100">
                     <div class="card-second">
                         <a title="login-icon" href="#" class="login">
                             <i class="bi bi-box-arrow-in-down-right"></i>
@@ -337,7 +340,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-md-6 app-download">
+                <div class="col-xl-3 col-md-6 app-download" data-aos="fade-left" data-aos-delay="400">
                     <h2>Download Our App</h2>
                     <h4>Lorem ipsum dolor sit amet consectetur</h4>
                     <p>
@@ -356,7 +359,7 @@
             </div>
 
             <!-- Coupon Section -->
-            <div class="coupon row">
+            <div class="coupon row" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-xl-9">
                     <h3>Would you like to get a discount coupon?</h3>
                 </div>
@@ -366,7 +369,7 @@
                     </a>
                 </div>
             </div>
-            <div class="coupon-content row">
+            <div class="coupon-content row" data-aos="fade-up" data-aos-delay="200">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repellat minima deleniti ut, animi
                     cum, deserunt iste totam ex dolore quidem quo quisquam, ipsum et. Ea repellendus, sint aspernatur
@@ -478,10 +481,15 @@
         </footer>
     </div>
     <!-- Back to Top Button -->
+    <a class="back-to-top active d-flex justify-content-center align-items-center" onclick="scrollToTop()">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="./js/main.js"></script>
 </body>
