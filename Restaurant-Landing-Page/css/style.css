@@ -147,6 +147,10 @@ header {
     color: #fff;
 }
 
+.nav li .nav-btn.active {
+    background: var(--primary)
+}
+
 /* Banner Carousel */
 
 .banner .food-image img {
@@ -188,4 +192,133 @@ header {
     border-radius: 0;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
+}
+
+/* Main */
+main {
+    padding: 100px 0 50px 0;
+}
+
+/* Primary Menu Section */
+.menu-primary {
+    position: relative;
+    padding: 150px 0 20px;
+}
+
+/* Item Card */
+.card {
+    position: relative;
+    background: transparent;
+    border: none;
+}
+
+.swiper {
+    overflow-y: visible;
+    overflow-x: clip;
+}
+
+.card .item-img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -150px;
+    width: 100%;
+    z-index: 1100;
+}
+
+.card .item-content {
+    position: relative;
+    background: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 40px;
+    border: none;
+    padding: 100px 20px 20px;
+}
+
+.card .item-content h4 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.card .item-content p {
+    font-size: .8em;
+    font-weight: 300;
+}
+
+.card .like {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card .like i {
+    color: #fff;
+    font-size: 1em;
+}
+
+.card .price {
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Item Card Button */
+
+.item-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-decoration: none;
+    background: #000;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.item-btn:hover {
+    border-radius: 50%;
+}
+
+.item-btn i {
+    font-size: 1.4em;
+    color: #fff;
+}
+
+/* Description */
+
+.description {
+    position: relative;
+    transform: translateY(-15%);
+}
+
+.description h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.description h4 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: end;
+    margin-bottom: 20px;
+}
+
+.description p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: end;
 }
