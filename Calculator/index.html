@@ -12,7 +12,53 @@
 </head>
 
 <body>
-
+    <!-- Main Container -->
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display" title="display">
+                </div>
+                <div>
+                    <input class="operator" type="button" name="allClear" id="AC" value="AC"
+                        onclick="display.value = ''">
+                    <input class="operator" type="button" name="delete" id="DEL" value="DEL"
+                        onclick="display.value = display.value.toString().slice(0, -1)">
+                    <input class="operator" type="button" name="fractionalUnit" id="fUnit" value="."
+                        onclick="display.value += '.'">
+                    <input class="operator" type="button" name="divide" id="divide" value="/"
+                        onclick="display.value += '/'">
+                </div>
+                <div>
+                    <input type="button" name="seven" id="seven" value="7" onclick="display.value += '7'">
+                    <input type="button" name="eight" id="eight" value="8" onclick="display.value += '8'">
+                    <input type="button" name="nine" id="nine" value="9" onclick="display.value += '9'">
+                    <input type="button" name="multiply" id="multiply" value="*" onclick="display.value += '*'"
+                        class="operator">
+                </div>
+                <div>
+                    <input type="button" name="four" id="four" value="4" onclick="display.value += '4'">
+                    <input type="button" name="five" id="five" value="5" onclick="display.value += '5'">
+                    <input type="button" name="six" id="six" value="6" onclick="display.value += '6'">
+                    <input type="button" name="minus" id="minus" value="-" onclick="display.value += '-'"
+                        class="operator">
+                </div>
+                <div>
+                    <input type="button" name="three" id="three" value="3" onclick="display.value += '3'">
+                    <input type="button" name="tow" id="tow" value="2" onclick="display.value += '2'">
+                    <input type="button" name="one" id="one" value="1" onclick="display.value += '1'">
+                    <input type="button" name="plus" id="plus" value="+" onclick="display.value += '+'"
+                        class="operator">
+                </div>
+                <div>
+                    <input type="button" name="doubleZero" id="doubleZero" value="00" onclick="display.value += '00'">
+                    <input type="button" name="zero" id="zero" value="0" onclick="display.value += '0'">
+                    <input class="equal operator" type="button" name="equals" id="equals" value="="
+                        onclick="display.value = eval(display.value)">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
