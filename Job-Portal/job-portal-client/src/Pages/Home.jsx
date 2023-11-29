@@ -3,6 +3,7 @@ import Banner from "../Components/Banner"
 import Card from "../Components/Card"
 import Jobs from "./Jobs"
 import Sidebar from "../Sidebar/Sidebar"
+import Newletter from "../Components/Newletter"
 
 const Home = () => {
     const [selectedCategory, setSelectedCategory] = useState(null)
@@ -82,7 +83,6 @@ const Home = () => {
                     postingDate
                 }) => (
                     jobLocation.toLowerCase() === selected.toLowerCase() || parseInt(maxPrice) <= parseInt(selected) || postingDate >= selected || salaryType.toLowerCase() === selected.toLowerCase() || experienceLevel.toLowerCase() === selected.toLowerCase() || employmentType.toLowerCase() === selected.toLowerCase()
-                    // console.log(parseInt(maxPrice) <= selected, jobLocation.toLowerCase() === selected.toLowerCase(), postingDate <= selected, salaryType.toLowerCase() === selected.toLowerCase(), employmentType.toLowerCase() === selected.toLowerCase())
                 ))
         }
 
@@ -128,7 +128,9 @@ const Home = () => {
                 </div>
 
                 {/* Right Side */}
-                <div className="bg-white p-4 rounded">Right</div>
+                <div className="bg-white p-4 rounded">
+                    <Newletter />
+                </div>
             </div>
         </div>
     )
