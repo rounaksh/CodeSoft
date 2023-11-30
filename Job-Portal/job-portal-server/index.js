@@ -11,7 +11,7 @@ app.use(cors())
 // user: rounak0734
 // pss: aBSlkCktNomLUhqd
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@mern-job-portal.yk9syjv.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -49,6 +49,22 @@ async function run() {
             const jobs = await jobsCollections.find({}).toArray()
             res.send(jobs)
         })
+
+        // Get Jobs by email
+        app.get('/myJobs/:email', async (req, res) => {
+            const email = req.params.email
+            const jobs = await jobsCollections.find({ postedBy: email }).toArray()
+            res.send(jobs)
+        })
+
+        // Delete Method
+        app.delete('/job/:id', async (req, res) => {
+            const id = req.params.id
+            const filter = { _id: new ObjectId(id) }
+            const result = await jobsCollections.deleteOne(filter)
+            res.send(result)
+        })
+
         // Send a ping to confirm a successful connection
         await client.db("admin").command({ ping: 1 });
         console.log("Pinged your deployment. You successfully connected to MongoDB!");

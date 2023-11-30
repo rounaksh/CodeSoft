@@ -7,7 +7,6 @@ function App() {
     <>
       <Navbar />
       <Outlet />
-      <footer>Footer</footer>
     </>
   )
 }

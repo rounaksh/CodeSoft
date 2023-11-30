@@ -14,7 +14,7 @@ const Home = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch('/jobs.json', {
+        fetch('http://localhost:5000/all-jobs', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

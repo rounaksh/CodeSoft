@@ -65,18 +65,22 @@ const Navbar = () => {
                             <li key={path} className='text-base text-white first:text-white py-1'>
                                 <NavLink
                                     to={path}
-                                    className={({ isActive }) => isActive ? 'active' : ''
+                                    className={({ isActive }) => isActive ? `active` : ''
                                     }
+                                    onClick={handleMenuToggler}
                                 >{title}</NavLink>
                             </li>
                         ))
                     }
-                    <li className='text-white py-1'>
-                        <Link to={'/login'} className='py-2 px-5 border rounded'>Log in</Link>
-                    </li>
-                    <li className='text-white py-1 mt-3'>
-                        <Link to={'/sign-up'} className='py-2 px-5 border rounded bg-blue text-white'>Sign up</Link>
-                    </li>
+                    <hr />
+                    <div className='flex justify-between'>
+                        <li className='text-white py-1 mt-3'>
+                            <Link to={'/login'} className='py-2 px-5 border rounded bg-blue text-white'>Log in</Link>
+                        </li>
+                        <li className='text-white py-1 mt-3'>
+                            <Link to={'/sign-up'} className='py-2 px-5 border rounded bg-blue text-white'>Sign up</Link>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </header>

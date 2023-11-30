@@ -7,12 +7,23 @@ const CreateJob = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm()
 
     const onSubmit = (data) => {
         data.skills = selectedOption
-        console.log(data)
+        fetch('http://localhost:5000/post-job', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(res => res.json()).then((res) => {
+            console.log(res)
+            res.acknowledged ? alert('Job Posted Successfully!!') : res.message ? alert(res.message) : alert('Please try again later.')
+            reset()
+        })
     }
     const options = [
         { value: 'JavaScript', label: 'JavaScript' },
@@ -34,7 +45,7 @@ const CreateJob = () => {
                     <div className="create-job-flex">
                         <div className="lg:w-1/2 w-full">
                             <label className="block mb-2 text-lg">Job Title</label>
-                            <input type="text" defaultValue={'Web Developer'} {...register('jobTitle')} className="create-job-input" />
+                            <input type="text" placeholder='Web Developer' {...register('jobTitle')} className="create-job-input" />
                         </div>
 
                         <div className="lg:w-1/2 w-full">
@@ -75,7 +86,7 @@ const CreateJob = () => {
                     <div className="create-job-flex">
                         <div className="lg:w-1/2 w-full">
                             <label className="block mb-2 text-lg">Job Posting Date</label>
-                            <input type="text" placeholder="Ex: 2023-11-28" {...register('postingDate')} className="create-job-input" />
+                            <input type="date" placeholder="Ex: 2023-11-28" {...register('postingDate')} className="create-job-input" />
                         </div>
                         <div className="lg:w-1/2 w-full">
                             <label className="block mb-2 text-lg">Experience Level</label>
