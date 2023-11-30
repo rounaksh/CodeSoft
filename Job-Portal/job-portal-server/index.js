@@ -32,6 +32,28 @@ async function run() {
         const db = client.db('mernJobPortal')
         const jobsCollections = db.collection('demoJobs')
 
+        // Get Method
+        app.get('/all-jobs', async (req, res) => {
+            const jobs = await jobsCollections.find({}).toArray()
+            res.send(jobs)
+        })
+
+        // Get Jobs by email
+        app.get('/myJobs/:email', async (req, res) => {
+            const email = req.params.email
+            const jobs = await jobsCollections.find({ postedBy: email }).toArray()
+            res.send(jobs)
+        })
+
+        // Get Job by ID
+        app.get('/all-jobs/:id', async (req, res) => {
+            const id = req.params.id
+            const jobs = await jobsCollections.findOne({
+                _id: new ObjectId(id)
+            })
+            res.send(jobs)
+        })
+
         // Post Method
         app.post('/post-job', async (req, res) => {
             const body = req.body
@@ -44,17 +66,19 @@ async function run() {
             })
         })
 
-        // Get Method
-        app.get('/all-jobs', async (req, res) => {
-            const jobs = await jobsCollections.find({}).toArray()
-            res.send(jobs)
-        })
-
-        // Get Jobs by email
-        app.get('/myJobs/:email', async (req, res) => {
-            const email = req.params.email
-            const jobs = await jobsCollections.find({ postedBy: email }).toArray()
-            res.send(jobs)
+        // Update Method
+        app.patch('/update-job/:id', async (req, res) => {
+            const id = req.params.id
+            const jobData = req.body
+            const filter = { _id: new ObjectId(id) }
+            const options = { upsert: true }
+            const updateDoc = {
+                $set: {
+                    ...jobData
+                },
+            }
+            const result = await jobsCollections.updateOne(filter, updateDoc, options)
+            res.send(result)
         })
 
         // Delete Method
