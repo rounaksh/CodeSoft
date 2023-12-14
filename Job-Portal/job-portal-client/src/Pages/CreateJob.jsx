@@ -1,9 +1,11 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import { useNavigate } from 'react-router-dom'
 import CreatableSelect from 'react-select/creatable'
 
 const CreateJob = () => {
     const [selectedOption, setSelectedOption] = useState(null)
+    const navigation = useNavigate()
     const {
         register,
         handleSubmit,
@@ -23,6 +25,7 @@ const CreateJob = () => {
             console.log(res)
             res.acknowledged ? alert('Job Posted Successfully!!') : res.message ? alert(res.message) : alert('Please try again later.')
             reset()
+            setTimeout(() => navigation('/'), 1000)
         })
     }
     const options = [

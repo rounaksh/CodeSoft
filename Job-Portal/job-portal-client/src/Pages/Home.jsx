@@ -106,11 +106,11 @@ const Home = () => {
                 </div>
 
                 {/* Job Cards */}
-                <div className="bg-white col-span-2 p-4 rounded-sm">
+                <div className="bg-white col-span-2 rounded-sm">
                     {
-                        isLoading ? (<p className="font-medium">Loading...</p>) : result.length > 0 ? (<Jobs result={result} />) :
+                        isLoading ? (<p className="font-medium pt-4 pl-4">Loading...</p>) : result.length > 0 ? (<Jobs result={result} />) :
                             <>
-                                <h3 className="text-lg font-bold mb-2">{result.length} Jobs</h3>
+                                <h3 className="text-lg font-bold pt-4 pl-4 mb-2">{result.length} Jobs</h3>
                                 No data found!!
                             </>
                     }

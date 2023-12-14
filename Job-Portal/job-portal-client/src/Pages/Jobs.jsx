@@ -2,7 +2,7 @@ const Jobs = ({ result }) => {
     return (
         <>
             <div>
-                <h3 className="text-lg font-bold mb-2">{result.length} Jobs</h3>
+                <h3 className="text-lg font-bold mb-2 pl-4 pt-4">{result.length} Jobs</h3>
             </div>
             <section>
                 {result}
