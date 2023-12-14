@@ -11,3 +11,5 @@ In this internship for codsoft, i practiced as well as improved my web/app desig
 - [Restraunt Landing Page Design](https://rounaksh.github.io/CodeSoft/Restaurant-Landing-Page) : A Glassmorphism Design based static, animated, responsive website design using Bootstrap and a bit of JavaScript.
 
 - [Calculator](https://rounaksh.github.io/CodeSoft/Calculator) : Simple Calculator for logic practice.
+
+- [Mern Job Portal](https://rounaksh.github.io/CodeSoft) : Responsive Mern Job Portal with working features like you can post a job as well as update the job posted, You can signup and login with uploading profile picture in server local storage feature and futher more i used firebase for different signin options to pick from.
