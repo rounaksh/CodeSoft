@@ -12,4 +12,4 @@ In this internship for codsoft, i practiced as well as improved my web/app desig
 
 - [Calculator](https://rounaksh.github.io/CodeSoft/Calculator) : Simple Calculator for logic practice.
 
-- [Mern Job Portal](https://rounaksh.github.io/CodeSoft) : Responsive Mern Job Portal with working features like you can post a job as well as update the job posted, You can signup and login with uploading profile picture in server local storage feature and futher more i used firebase for different signin options to pick from.
+- [Mern Job Portal](https://657bfcfbfcbb14439bf3989b--effervescent-panda-786576.netlify.app/) : Responsive Mern Job Portal with working features like you can post a job as well as update the job posted, You can signup and login with uploading profile picture in server local storage feature and futher more i used firebase for different signin options to pick from.
