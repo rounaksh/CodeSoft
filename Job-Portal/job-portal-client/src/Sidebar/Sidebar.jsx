@@ -2,7 +2,7 @@ import EmploymentType from "./EmploymentType"
 import JobPostingData from "./JobPostingData"
 import Location from "./Location"
 import Salary from "./Salary"
-import WorkExperience from "./workExperience"
+import WorkExperience from "./WorkExperience"
 
 const Sidebar = ({ handleChange, handleClick }) => {
     return (
