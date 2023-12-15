@@ -20,7 +20,7 @@ const JobDetails = () => {
     ]
 
     useEffect(() => {
-        fetch(`http://localhost:5000/all-jobs/${id}`).then(res => res.json()).then(data => setJob(data))
+        fetch(`https://job-portal-u10r.onrender.com/all-jobs/${id}`).then(res => res.json()).then(data => setJob(data))
     }, [])
 
     const handleApply = async () => {

@@ -13,7 +13,7 @@ const MyJobs = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch(`http://localhost:5000/myJobs/${email}`).then(res => res.json()).then(data => {
+        fetch(`https://job-portal-u10r.onrender.com/myJobs/${email}`).then(res => res.json()).then(data => {
             setJobs(data)
             setIsLoading(false)
         })
@@ -42,7 +42,7 @@ const MyJobs = () => {
 
     // Delete func.
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/job/${id}`, {
+        fetch(`https://job-portal-u10r.onrender.com/job/${id}`, {
             method: "DELETE"
         }).then(res => {
             res.ok ? alert('Deletion Successfull!!') : alert('something went wrong please try again later!')

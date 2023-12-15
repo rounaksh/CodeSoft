@@ -47,7 +47,7 @@ const SignUp = () => {
         e.preventDefault()
         const formData = new FormData()
         formData.append('file', newUser.profile)
-        await fetch('http://localhost:5000/upload-image', {
+        await fetch('https://job-portal-u10r.onrender.com/upload-image', {
             method: 'POST',
             body: formData
         }).then(res => res.json()).then(result => {
@@ -56,7 +56,7 @@ const SignUp = () => {
                 newUser.profile = result.imageUrl
             }
         }).then(() => {
-            fetch('http://localhost:5000/signup', {
+            fetch('https://job-portal-u10r.onrender.com/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

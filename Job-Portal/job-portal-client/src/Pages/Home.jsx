@@ -14,7 +14,7 @@ const Home = () => {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch('http://localhost:5000/all-jobs', {
+        fetch('https://job-portal-u10r.onrender.com/all-jobs', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

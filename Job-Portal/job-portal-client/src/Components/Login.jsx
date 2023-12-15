@@ -38,7 +38,7 @@ const Login = () => {
 
     // Simple Login
     const handleLogin = async (data) => {
-        await fetch('http://localhost:5000/login', {
+        await fetch('https://job-portal-u10r.onrender.com/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
